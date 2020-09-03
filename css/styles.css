@@ -1,0 +1,150 @@
+:root {
+
+  --color-primary: #19f;
+  --color-primary-contranst: #2d2d2d;
+  --color-danger: #19f;
+  --color-info: #19f;
+  --color-success: #19f;
+  --color-warning: #19f;
+  --color-dark: #2d2d2d;
+  --color-grey: #666;
+  --color-light: #f7f7f7;
+
+  --gamepad-size: 130px;
+  --gamepad-padding: 8px;
+  --gamepad-button-size: 35px;
+
+}
+
+* { 
+  padding: 0; 
+  margin: 0; 
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: var(--color-grey); */
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0.5rem;
+}
+/* 
+#display-panel,
+canvas { 
+  border: 2px solid var(--color-grey); 
+  border-radius: 8px;
+  background: var(--color-light); 
+}
+
+#display-panel {
+  width: 300px;
+  height: 400px;
+}
+
+.controls {
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 1rem;
+}
+
+.buttons {
+  display: flex;
+}
+
+#button-a,
+#button-b {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  margin-right: 0.75rem;
+  color: var(--color-light);
+  font-size: 1.5rem;
+  font-weight: bold;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.2);
+  box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.16s;
+}
+
+#gamepad-top:active,
+#gamepad-right:active,
+#gamepad-bottom:active,
+#gamepad-left:active,
+#button-a:active,
+#button-b:active {
+  box-shadow: inset 0 2px 10px 1px rgba(0, 0, 0, 0.15);
+}
+
+#button-a {
+  margin-top: 1.5rem;
+}
+
+#button-b {
+  margin-bottom: 1rem;
+}
+
+.gamepad {
+  position: relative;
+  width: var(--gamepad-size);
+  height: var(--gamepad-size);
+  border-radius: 50%;
+
+  background-color: rgba(0, 0, 0, 0.2);
+
+
+}
+
+#gamepad-top,
+#gamepad-right,
+#gamepad-bottom,
+#gamepad-left {
+  position: absolute;
+  width: var(--gamepad-button-size);
+  height: var(--gamepad-button-size);
+  background-color: var(--color-dark);
+  box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.16s;
+}
+
+#gamepad-top,
+#gamepad-bottom{
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+#gamepad-right,
+#gamepad-left {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+#gamepad-top {
+  top: var(--gamepad-padding);
+  border-radius: 12px 12px 0 0;
+}
+
+#gamepad-right {
+  right: var(--gamepad-padding);
+  border-radius: 0 12px 12px 0;
+}
+
+#gamepad-bottom {
+  bottom: var(--gamepad-padding);
+  border-radius: 0 0 12px 12px;
+}
+
+#gamepad-left {
+  left: var(--gamepad-padding);
+  border-radius: 12px 0 0 12px;
+}
+ */

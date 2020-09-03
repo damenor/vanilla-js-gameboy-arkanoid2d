@@ -1,0 +1,258 @@
+@font-face {
+  font-family: 'Pretendo';
+  src: url('./fonts/Pretendo.ttf');
+}
+
+.gameboy {
+  position: relative;
+  display: block;
+  margin: 20px auto;
+  width: 422px;
+  height: 697px;
+  background: #EEE;
+  border-radius: 10px 10px 60px 10px;
+  box-shadow: 5px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gameboy::before,
+.gameboy::after {
+  content: '';
+  position: absolute;
+  height: 31px;
+}
+
+.gameboy::before {
+  width: 100%;
+  border-bottom: 4px solid #e0e0e0;
+}
+
+.gameboy::after {
+  top: 0;
+  width: 334px;
+  margin: 0 40px;
+  border-left: 4px solid #e0e0e0;
+  border-right: 4px solid #e0e0e0;
+}
+
+.gameboy__container {
+  position: relative;
+  top: 60px;
+  left: 30px;
+  width: 360px;
+  height: 420px;
+  margin-bottom: 40px;
+  background-color: #777777;
+  border-radius: 13px 13px 50px 13px;
+}
+
+.gameboy__power {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 10px;
+  width: 10px;
+  height: 10px;
+  background-color: #b98181;
+  border-radius: 50%;
+  transition: background-color 300ms linear;
+}
+
+.gameboy__power.gameboy__power--on {
+  background-color: red;
+  box-shadow: 0 0 3px 1px #ef5350;
+}
+
+canvas {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.gameboy__screen {
+  position: relative;
+  top: 30px;
+  width: 300px;
+  height: 350px;
+  margin: 0 auto;
+}
+
+.gameboy__screen,
+canvas {
+  background-color: #bdae58;
+  box-shadow: inset 3px 3px rgba(0, 0, 0, 0.15);
+}
+
+.gameboy__screen-header {
+  position: relative;
+  top: -30px;
+  width: 100%;
+  height: 30px;
+  padding-top: 10px;
+  color: #b3b3b3;
+  font-size: 10px;
+  font-family: sans-serif;
+  text-align: right;
+}
+
+.gameboy__screen-header::before,
+.gameboy__screen-header::after {
+  content: '';
+  position: absolute;
+  height: 3px;
+  background-color: #8b1d90;
+  box-shadow: 0 6px #283593;
+}
+
+.gameboy__screen-header::before {
+  top: 12px;
+  left: 0px;
+  width: 80px;
+}
+
+.gameboy__screen-header::after {
+  top: 12px;
+  right: 0px;
+  width: 38px;
+}
+
+.gameboy__screen-header span {
+  display: block;
+  margin-left: 42px;
+  text-align: center;
+}
+
+.gameboy__screen-text {
+  z-index: 10;
+  display: inline;
+  position: relative;
+  top: -26px;
+  left: 30%;
+  color: #8a891f;
+  font-size: 17px;
+  font-family: 'Pretendo';
+  opacity: 0;
+}
+
+.gameboy__screen-text.gameboy__screen-text--end {
+  top: 50px;
+  opacity: 1;
+  transition: top 3s linear;
+}
+
+.gameboy__controls {
+  position: relative;
+  display: block;
+  margin-top: 30px;
+}
+
+.gameboy__controls-direction {
+  position: relative;
+  top: 60px;
+  margin-left: 40px;
+}
+
+.gameboy__controls-direction::before {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  top: 30px;
+  left: 30px;
+  width: 30px;
+  height: 30px;
+  background-color: #353535;
+  border-radius: 50%;
+}
+
+.gameboy__controls-direction-vertical,
+.gameboy__controls-direction-horizontal {
+  position: absolute;
+  left: 30px;
+  width: 30px;
+  height: 90px;
+  background-color: #444;
+  border-radius: 5px;
+}
+
+.gameboy__controls-direction-vertical::before,
+.gameboy__controls-direction-horizontal::before,
+.gameboy__controls-direction-vertical::after,
+.gameboy__controls-direction-horizontal::after {
+  content: '';
+  position: relative;
+  width: 0;
+  height: 0;
+  border-top: 7px solid #dedede;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+
+}
+
+.gameboy__controls-direction-vertical::before,
+.gameboy__controls-direction-horizontal::before {
+  top: 99px;
+  left: 8px;
+}
+
+.gameboy__controls-direction-vertical::after,
+.gameboy__controls-direction-horizontal::after {
+  top: -27px;
+  left: -5.6px;
+}
+
+.gameboy__controls-direction-horizontal {
+  transform: rotate(90deg);
+}
+
+.gameboy__controls-ab{
+  position: absolute;
+  top: 72px;
+  left: 262px;
+  width: 130px;
+  height: 60px;
+  background-color: #dfdfdf;
+  border-radius: 30px;
+  transform: rotate(-25deg);
+}
+
+.gameboy__controls-ab::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  right: 9px;
+  width: 44px;
+  height: 44px;
+  background-color: #a93671;
+  box-shadow: 68px 0 #a93671;
+  transform: rotate(180deg);
+  border-radius: 50%;
+}
+
+.gameboy__controls-start {
+  position: absolute;
+  top: 175px;
+  width: 60px;
+  left: 130px;
+  height: 12px;
+  background-color: #999;
+  border-radius: 10px;
+  transform: rotate(-25deg);
+  box-shadow: 
+    57px 27px #999, 0 0 0 5px #dfdfdf, 
+    57px 27px 0 5px #dfdfdf;
+}
+
+.gameboy__speakers {
+  content: '';
+  position: relative;
+  height: 40px;
+  width: 8px;
+  top: 190px;
+  left: 310px;
+  background-color: #DDD;
+  border-radius: 4px;
+  transform: rotate(-25deg);
+  box-shadow:
+    20px 0 #ddd, 40px 0 #ddd, 60px 0 #ddd, 
+    80px 0 #ddd, 100px 0 #ddd;
+}
