@@ -182,27 +182,45 @@ canvas {
   position: relative;
   width: 0;
   height: 0;
-  border-top: 7px solid #dedede;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
-
 }
 
 .gameboy__controls-direction-vertical::before,
 .gameboy__controls-direction-horizontal::before {
   top: 99px;
   left: 8px;
+  border-top: 7px solid #ccc;
 }
 
 .gameboy__controls-direction-vertical::after,
 .gameboy__controls-direction-horizontal::after {
   top: -27px;
   left: -5.6px;
+  border-bottom: 7px solid #ccc;
 }
 
 .gameboy__controls-direction-horizontal {
   transform: rotate(90deg);
 }
+
+.gameboy__controls-direction-horizontal-left,
+.gameboy__controls-direction-horizontal-right {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 30px;
+  border: none;
+  background-color: transparent;
+}
+.gameboy__controls-direction-horizontal-left {
+  bottom: 0;
+}
+
+.gameboy__controls-direction-horizontal-right {
+  top: 0;
+}
+
 
 .gameboy__controls-ab{
   position: absolute;
